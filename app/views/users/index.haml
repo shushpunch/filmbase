@@ -1,0 +1,17 @@
+.col
+  %dl
+    %dt=User.human_attribute_name(:login)
+    %dd=@current_user.login
+    %dt=User.human_attribute_name(:email)
+    %dd=@current_user.email
+    %dt=User.human_attribute_name(:phone)
+    %dd=@current_user.phone
+  
+  
+  
+= link_to 'Изменить номер мобильного телефона', edit_user_path(@user)
+
+\|
+
+
+

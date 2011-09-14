@@ -1,0 +1,12 @@
+= form_for @user do |f|
+  -if @user.errors.any?
+    .msg.error
+      %h2= "При сохранении произошли ошибки"
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :phone
+    = f.text_field :phone
+  .actions
+    = f.submit
